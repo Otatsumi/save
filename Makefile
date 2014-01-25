@@ -13,7 +13,8 @@ NAME    = lib
 SRC     = main.c \
           put.c \
           swap.c \
-	  fct_str.c
+	  fct_str.c \
+	  sort_wordtab.c
 
 OBJ     = $(SRC:.c=.o)
 

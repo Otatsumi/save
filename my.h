@@ -20,5 +20,6 @@ int     my_getnbr(char *str);
 int	my_getnbr_base(char *str, char *base);
 char	*my_strcat(char *str1, char *str2);
 void	my_putnbr_base(int nb, char *base);
+char	**my_sort_wordtab(char *str, char c);
 
 #endif /* !MY_H_ */
