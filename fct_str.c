@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include "my.h"
 
-char	*my_strcpy(char *str1, char *str2)
+char	*my_strcat(char *str1, char *str2)
 {
   char	*buffer;
   int	i;

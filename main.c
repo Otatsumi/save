@@ -22,7 +22,7 @@ int     main()
   my_putchar('\n');
   printf("%d\n", my_getnbr("42"));
 
-  buff = my_strcpy("coucou ", "le monde.");
+  buff = my_strcat("coucou ", "le monde.");
   my_putstr(buff);
   my_putchar('\n');
 
