@@ -31,3 +31,23 @@ int     my_getnbr(char *str)
     }
   return (nb);
 }
+
+int     my_getnbr_base(char *str, char *base)
+{
+  int	nb;
+  int	size;
+  int	i;
+  int	j;
+
+  size = my_strlen(base);
+  i = 0;
+  while (str[i] != 0)
+    {
+      j = 0;
+      while (base[j] != str[i])
+	j++;
+      nb = (nb * size) + j;
+      i++;
+    }
+  return (nb);
+}
