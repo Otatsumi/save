@@ -1,3 +1,13 @@
+/*
+** put.c for  in /home/bauwen_j/rendu/lib
+** 
+** Made by bauwen_j
+** Login   <bauwen_j@epitech.eu>
+** 
+** Started on  Sat Jan 25 14:46:04 2014 bauwen_j
+** Last update Sat Jan 25 14:46:04 2014 bauwen_j
+*/
+
 #include <unistd.h>
 
 void    my_putchar(char c)
@@ -32,3 +42,17 @@ void    my_put_nbr(int nb)
   my_putchar((nb % 10) + 48);
 }
 
+void	my_putnbr_base(int nb, char *base)
+{
+  int	i;
+
+  if (nb < 0)
+    {
+      my_putchar('-');
+      nb = -nb;
+    }
+  i = my_strlen(base);
+  if (nb > i - 1)
+    my_putnbr_base((nb / i), base);
+  my_putchar(base[nb % i]);
+}
