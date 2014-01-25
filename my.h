@@ -17,6 +17,7 @@ int     my_strlen(char *str);
 void    my_put_nbr(int nb);
 void    my_swap(int *a, int *b);
 int     my_getnbr(char *str);
+int	my_getnbr_base(char *str, char *base);
 char	*my_strcpy(char *str1, char *str2);
 void	my_putnbr_base(int nb, char *base);
 
