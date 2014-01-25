@@ -14,7 +14,8 @@ SRC     = main.c \
           put.c \
           swap.c \
 	  fct_str.c \
-	  sort_wordtab.c
+	  sort_wordtab.c \
+	  list.c
 
 OBJ     = $(SRC:.c=.o)
 

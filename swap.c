@@ -8,6 +8,8 @@
 ** Last update Sat Jan 25 14:47:24 2014 bauwen_j
 */
 
+#include "my.h"
+
 void    my_swap(int *a, int *b)
 {
   int   c;

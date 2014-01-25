@@ -8,29 +8,20 @@
 ** Last update Sat Jan 25 14:46:28 2014 bauwen_j
 */
 
+#include <stdlib.h>
 #include "my.h"
 
-int     main()
+int	main(int ac, char **argv)
 {
-  char *buff;
+  t_circle *tab;
 
-  my_putchar(42);
-  my_putchar('\n');
-  my_putstr("42");
-  my_putchar('\n');
-  my_put_nbr(42);
-  my_putchar('\n');
-  printf("%d\n", my_getnbr("42"));
+  tab = circle_list(argv);  
+  my_putstr("ok\n");
+  while (1)
+    {
+      my_putstr(tab->data);
+      tab = tab->next;
+    }
 
-  buff = my_strcat("coucou ", "le monde.");
-  my_putstr(buff);
-  my_putchar('\n');
-
-  my_putnbr_base(42, "01");
-  my_putchar('\n');
-  my_putnbr_base(42, "0123456789");
-  my_putchar('\n');
-  my_putnbr_base(42, "0123456789ABCDEF");
-  my_putchar('\n');
   return (0);
 }

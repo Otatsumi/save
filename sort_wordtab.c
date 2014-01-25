@@ -9,6 +9,7 @@
 */
 
 #include <stdlib.h>
+#include "my.h"
 
 int	sizeword(char *str, char c, int i)
 {
