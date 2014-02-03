@@ -11,12 +11,12 @@
 #ifndef MY_H_
 # define MY_H_
 
-typedef struct	s_circle
+typedef struct	s_list
 {
   char *data;
-  struct s_circle *next;
-  struct s_circle *prev;
-}		t_circle;
+  struct s_list *next;
+  struct s_list *prev;
+}		t_list;
 
 void		my_putchar(char c);
 void		my_putstr(char *str);
@@ -28,6 +28,8 @@ int		my_getnbr_base(char *str, char *base);
 char		*my_strcat(char *str1, char *str2);
 void		my_putnbr_base(int nb, char *base);
 char		**my_sort_wordtab(char *str, char c);
-t_circle	*circle_list(char **tab);
+t_list		*circle_list(char **tab);
+t_list		*doube_list(char **tab);
+t_list		*simple_list(char **tab)
 
 #endif /* !MY_H_ */

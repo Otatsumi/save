@@ -17,12 +17,12 @@ void	my_error()
   exit(0);
 }
 
-t_circle	*circle_list(char **tab)
+t_list	*circle_list(char **tab)
 {
   int           i;
-  t_circle	*arg;
-  t_circle      *last;
-  t_circle      *first;
+  t_list	*arg;
+  t_list      *last;
+  t_list      *first;
 
   i = 1;
   if ((arg = malloc(sizeof(t_circle))) == NULL)
@@ -40,6 +40,58 @@ t_circle	*circle_list(char **tab)
       arg = arg->next;
       arg->next = first;
       arg->prev = last;
+      i++;
+    }
+  return (arg);
+}
+
+t_list	*doube_list(char **tab)
+{
+  int           i;
+  t_list	*arg;
+  t_list      *last;
+
+  i = 1;
+  if ((arg = malloc(sizeof(t_circle))) == NULL)
+    my_error();
+  arg->data = tab[0];
+  arg->next = NULL;
+  arg->prev = NULL;
+  while (tab[i] != 0)
+    {
+      if ((arg->next = malloc(sizeof(t_circle))) == NULL)
+	my_error();
+      arg->next->data = tab[i];
+      last = arg;
+      arg = arg->next;
+      arg->next = NULL;
+      arg->prev = last;
+      i++;
+    }
+  return (arg);
+}
+
+t_list	*simple_list(char **tab)
+{
+  int           i;
+  t_list	*arg;
+  t_list      *last;
+
+  i = 1;
+  if ((arg = malloc(sizeof(t_circle))) == NULL)
+    my_error();
+  arg->data = tab[0];
+  arg->next = NULL;
+  arg->prev = NULL;
+  while (tab[i] != 0)
+    {
+      if ((arg->next = malloc(sizeof(t_circle))) == NULL)
+	my_error();
+      arg->next->data = tab[i];
+      last = arg;
+      arg = arg->next;
+      arg->next = NULL;
+      arg->prev = NULL;
       i++;
     }
   return (arg);
