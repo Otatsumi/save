@@ -25,7 +25,7 @@ t_list	*circle_list(char **tab)
   t_list      *first;
 
   i = 1;
-  if ((arg = malloc(sizeof(t_circle))) == NULL)
+  if ((arg = malloc(sizeof(t_list))) == NULL)
     my_error();
   arg->data = tab[0];
   arg->next = arg;
@@ -33,7 +33,7 @@ t_list	*circle_list(char **tab)
   first = arg;
   while (tab[i] != 0)
     {
-      if ((arg->next = malloc(sizeof(t_circle))) == NULL)
+      if ((arg->next = malloc(sizeof(t_list))) == NULL)
 	my_error();
       arg->next->data = tab[i];
       last = arg;
@@ -45,21 +45,21 @@ t_list	*circle_list(char **tab)
   return (arg);
 }
 
-t_list	*doube_list(char **tab)
+t_list	*double_list(char **tab)
 {
   int           i;
   t_list	*arg;
   t_list      *last;
 
   i = 1;
-  if ((arg = malloc(sizeof(t_circle))) == NULL)
+  if ((arg = malloc(sizeof(t_list))) == NULL)
     my_error();
   arg->data = tab[0];
   arg->next = NULL;
   arg->prev = NULL;
   while (tab[i] != 0)
     {
-      if ((arg->next = malloc(sizeof(t_circle))) == NULL)
+      if ((arg->next = malloc(sizeof(t_list))) == NULL)
 	my_error();
       arg->next->data = tab[i];
       last = arg;
@@ -78,14 +78,14 @@ t_list	*simple_list(char **tab)
   t_list      *last;
 
   i = 1;
-  if ((arg = malloc(sizeof(t_circle))) == NULL)
+  if ((arg = malloc(sizeof(t_list))) == NULL)
     my_error();
   arg->data = tab[0];
   arg->next = NULL;
   arg->prev = NULL;
   while (tab[i] != 0)
     {
-      if ((arg->next = malloc(sizeof(t_circle))) == NULL)
+      if ((arg->next = malloc(sizeof(t_list))) == NULL)
 	my_error();
       arg->next->data = tab[i];
       last = arg;

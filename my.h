@@ -29,7 +29,7 @@ char		*my_strcat(char *str1, char *str2);
 void		my_putnbr_base(int nb, char *base);
 char		**my_sort_wordtab(char *str, char c);
 t_list		*circle_list(char **tab);
-t_list		*doube_list(char **tab);
-t_list		*simple_list(char **tab)
+t_list		*double_list(char **tab);
+t_list		*simple_list(char **tab);
 
 #endif /* !MY_H_ */

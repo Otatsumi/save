@@ -13,15 +13,23 @@
 
 int	main(int ac, char **argv)
 {
-  t_circle *tab;
+  t_list *tab;
 
-  tab = circle_list(argv);  
+  tab = double_list(argv);  
   my_putstr("ok\n");
-  while (1)
+  while (tab->prev != NULL)
+    tab = tab->prev;
+  while (tab->next != NULL)
     {
       my_putstr(tab->data);
+      my_putchar('\n');
       tab = tab->next;
     }
-
+  while (tab->prev != NULL)
+    {
+      my_putstr(tab->data);
+      my_putchar('\n');
+      tab = tab->prev;
+    }
   return (0);
 }
