@@ -1,6 +1,4 @@
-lib
-===
+save
+====
 
-library of the Epitech's pool.
-
-language C.
+sove of epitech's project
