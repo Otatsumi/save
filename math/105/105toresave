@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ruby 105tore.rb "$@"
