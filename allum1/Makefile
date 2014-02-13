@@ -18,6 +18,7 @@ SRC     = main.c \
 	  puttab.c \
 	  my_unsigned_int.c \
 	  2player.c \
+	  my_clear.c \
 	  put.c
 
 OBJ     = $(SRC:.c=.o)
@@ -27,7 +28,7 @@ CFLAGS  = -W -Wall -Wextra -Wpointer-sign
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	cc -o $(NAME) $(OBJ)
+	cc -o $(NAME) $(OBJ) -lncurses
 
 clean:
 	rm -f $(OBJ)
