@@ -62,14 +62,10 @@ char	**my_tab(int i)
   return (tab);
 }
 
-void	ready(char **tab, int nb_a, char **env)
+void	ready(char **tab, int nb_a)
 {
   char	*str;
-  char	*clear;
 
-  /* clear = my_clear(env); */
-  /* if (clear != NULL) */
-  /*   my_putstr(clear); */
   my_putstr("enter 1 for 1 player and 2 for 2 player\n");
   if ((str = get_next_line(0)) == NULL)
     {
@@ -90,7 +86,7 @@ void	ready(char **tab, int nb_a, char **env)
     }
 }
 
-int	main(int ac, char **argv, char **env)
+int	main(int ac, char **argv)
 {
   int	nb_line;
   int	nb_allum;
@@ -113,6 +109,6 @@ int	main(int ac, char **argv, char **env)
   if ((tab = my_tab(nb_line)) == NULL)
     return (0);
   nb_allum = al_tab(tab);
-  ready(tab, nb_allum, env);
+  ready(tab, nb_allum);
   return (0);
 }
