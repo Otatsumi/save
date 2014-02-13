@@ -27,7 +27,7 @@ CFLAGS  = -W -Wall -Wextra -Wpointer-sign
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	cc -o $(NAME) $(OBJ) -lncurses
+	cc -o $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ)

@@ -64,15 +64,17 @@ char	**ia(char **tab)
   sizet = my_size_tab(tab);
   if (sizet % 2 != 0)
     {
-      if (check_one(tab) == 0)
+      if (check_one(tab) > 0 && sizet == 3)
+	tab[i] = sous_allum(my_strlen(tab[i]) - 1, my_strlen(tab[i]));
+      else if (check_one(tab) == 0)
 	tab = sous_line(tab, sizet - 1);
       else
 	tab[i] = sous_allum(my_strlen(tab[i]) - 1, my_strlen(tab[i]));
     }
   else
     {
-      if (sizet == 2)
-	tab[i] = sous_allum(my_strlen(tab[i]) - 1, my_strlen(tab[i]));
+      if (sizet == 2 && check_one(tab) == 2)
+	tab[1] = sous_allum(my_strlen(tab[1]) - 1, my_strlen(tab[1]));
       else
 	tab = sous_line(tab, sizet - 1);
     }
