@@ -91,6 +91,7 @@ void	battle(char **tab, int nb_a)
   while (nb_a != 0)
     {
       my_put_tab(tab);
+      my_putstr("\nround player\n");
       line = nb_line(tab);
       allum = nb_allum(tab, line);
       tab = new_tab(tab, line, allum);
@@ -102,6 +103,7 @@ void	battle(char **tab, int nb_a)
 	  my_putstr("you loose\n");
 	  exit(0);
 	}
+      my_putstr("round ia\n");
       tab = ia(tab);
       nb_a = al_tab(tab);
     }
