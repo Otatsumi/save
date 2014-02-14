@@ -66,7 +66,7 @@ void	ready(char **tab, int nb_a)
 {
   char	*str;
 
-  my_putstr("enter 1 for 1 player and 2 for 2 player\n");
+  my_putstr("enter 1 for 1 player and 2 for 2 player or 3 for fortboyar\n");
   if ((str = get_next_line(0)) == NULL)
     {
       my_putstr("sorry, get_next_line failed\nyou play with IA\n");
@@ -81,6 +81,8 @@ void	ready(char **tab, int nb_a)
 	}
       else if (my_unsigned_int(str) == 1)
 	battle(tab, nb_a);
+      else if (my_unsigned_int(str) == 3)
+	fort_mode();
       else
 	battle(tab, nb_a);
     }

@@ -29,5 +29,6 @@ void	my_quit(char *str);
 void	two_player(char **tab, int nb_a);
 char	*nb_allum(char **tab, char *line);
 char	*nb_line(char **tab);
+void	fort_mode();
 
 #endif /* !MY_H_ */
