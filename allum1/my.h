@@ -30,5 +30,7 @@ void	two_player(char **tab, int nb_a);
 char	*nb_allum(char **tab, char *line);
 char	*nb_line(char **tab);
 void	fort_mode();
+char	*ia_fort(char *allum);
+char	*fort_sous(char *str, char *allum);
 
 #endif /* !MY_H_ */

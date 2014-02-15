@@ -19,6 +19,7 @@ SRC     = main.c \
 	  my_unsigned_int.c \
 	  2player.c \
 	  fort_boyard.c \
+	  ia_fort.c \
 	  put.c
 
 OBJ     = $(SRC:.c=.o)

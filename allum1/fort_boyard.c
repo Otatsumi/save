@@ -46,25 +46,6 @@ char	*fort_allum(char *str)
   return (allum);
 }
 
-char	*fort_sous(char *str, char *allum)
-{
-  char	*buff;
-  int	i;
-  int	j;
-
-  i = my_strlen(str) - my_unsigned_int(allum);
-  if ((buff = malloc(i * sizeof(char))) == NULL)
-    my_quit("error : malloc failed\n");
-  j = 0;
-  while (j < i)
-    {
-      buff[j] = '|';
-      j++;
-    }
-  buff[j] = 0;
-  return (buff);
-}
-
 void	fort_battle(char *str)
 {
   char	*allum;
@@ -84,7 +65,9 @@ void	fort_battle(char *str)
 	  my_putstr("you loose\n");
 	  exit(0);
 	}
+      my_putstr(str);
       my_putstr("\nround ia\n");
+      str = ia_fort(str);
       nb_a = my_strlen(str);
     }
   my_putstr("you win\n");
