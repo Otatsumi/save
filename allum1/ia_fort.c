@@ -10,6 +10,7 @@
 
 #include <stdlib.h>
 #include "my.h"
+#include "get_next_line.h"
 
 char	*fort_sous(char *str, char *allum)
 {
@@ -42,4 +43,49 @@ char	*ia_fort(char *allum)
   nbr[1] = 0;
   allum = fort_sous(allum, nbr);
   return (allum);
+}
+
+void	fort_2p(char *str)
+{
+  char	*allum;
+  int	nb_a;
+
+  my_putstr("the battle beggin for 2 player\n");
+  nb_a = my_strlen(str);
+  while (nb_a != 0)
+    {
+      my_putstr(str);
+      my_putstr("\nround player 1\n");
+      allum = fort_allum(str);
+      str = fort_sous(str, allum);
+      nb_a = my_strlen(str);
+      if (nb_a == 0)
+	{
+	  my_putstr("player 1 loose, player 2 win\n");
+	  exit(0);
+	}
+      my_putstr(str);
+      my_putstr("\nround player 2\n");
+      allum = fort_allum(str);
+      str = fort_sous(str, allum);
+      nb_a = my_strlen(str);
+    }
+  my_putstr("player 2 loose, player 1 win\n");
+}
+
+int	check_play()
+{
+  char	*str;
+  int	i;
+
+  str = NULL;
+  i = 0;
+  while (str == NULL || i <= 0 || i > 2)
+    {
+      my_putstr("\nenter 1 for 1 player or 2 for 2 player\n");
+      if ((str = get_next_line(0)) == NULL)
+	my_quit("error : get_next_line failed\n");
+      i = my_unsigned_int(str);
+    }
+  return (i);
 }

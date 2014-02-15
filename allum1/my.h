@@ -32,5 +32,8 @@ char	*nb_line(char **tab);
 void	fort_mode();
 char	*ia_fort(char *allum);
 char	*fort_sous(char *str, char *allum);
+char	*fort_allum(char *str);
+void	fort_2p(char *str);
+int	check_play();
 
 #endif /* !MY_H_ */

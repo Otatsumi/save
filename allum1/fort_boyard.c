@@ -55,8 +55,8 @@ void	fort_battle(char *str)
   nb_a = my_strlen(str);
   while (nb_a != 0)
     {
-      my_putstr("\nround player\n");
       my_putstr(str);
+      my_putstr("\nround player\n");
       allum = fort_allum(str);
       str = fort_sous(str, allum);
       nb_a = my_strlen(str);
@@ -106,5 +106,8 @@ void	fort_mode()
       i++;
     }
   allum[i] = 0;
-  fort_battle(allum);
+  if (check_play() == 1)
+    fort_battle(allum);
+  else
+    fort_2p(allum);
 }
