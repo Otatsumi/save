@@ -14,6 +14,6 @@ get next line
 
 rush : morse
 
-math: 103architecte, 105tore
+math: 103architecte, 105tore, 106bombyx
 
 allum1
