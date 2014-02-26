@@ -42,9 +42,7 @@ class Bombyx
   end
 
   def calc_in_tab a, b
-    if a == b
-      Error::call "error: argument are equivalent"
-    elsif a < 0 or b < 0
+    if a < 0 or b < 0
       Error::call "error: number positiv only"
     elsif a < b
       min = a
