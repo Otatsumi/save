@@ -1,0 +1,61 @@
+.\" Manpage for sudoki-bi.
+.\" Contact bauwen_j@epitech.eu and broggi_t@epitech.eu in to correct errors or typos.
+.TH sudoki-bi "1" "March 2014" "1.0" "sudoki-bi man page"
+.SH NAME
+.PP
+sudoki-bi \- A simple sudoku grid solver.
+
+.SH SYNOPSIS
+.PP
+\fB./sudoki-bi\fR [\fPPARAMS\fR]
+.SH DESCRIPTION
+.PP
+This program slove a sudoku's grid. The sudoku's grid is read in standard input.
+
+.SH OPTIONS
+.TP
+\fB-c\fR, \fB--color\fR
+Display the new numbers in the grid in green.
+.TP
+\fB-h\fR, \fB--help\fR
+Display this help and exit.
+
+.SH EXAMPLES
+.PP
+\fB./sudoki-bi < samples/test.txt\fR
+
+|------------------|
+.br
+| 2 5 8 3 7 4 1 6 9|
+.br
+| 1 7 9 5 8 6 2 4 3|
+.br
+| 3 4 6 2 9 1 7 8 5|
+.br
+| 7 2 4 6 3 9 8 5 1|
+.br
+| 8 1 5 4 2 7 9 3 6|
+.br
+| 9 6 3 8 1 5 4 2 7|
+.br
+| 4 3 7 1 6 8 5 9 2|
+.br
+| 6 8 1 9 5 2 3 7 4|
+.br
+| 5 9 2 7 4 3 6 1 8|
+.br
+|------------------|
+
+There is some grid examples in samples/
+
+.SH SEE ALSO
+No related manpage.
+
+.SH REPORTING BUGS
+No known bugs.
+.br
+Report ./sudoki-bi bugs to jordan.bauwens@epitech.eu and thibaut.broggi@epitech.eu
+
+.SH AUTHOR
+bauwen_j, broggi_t
+
