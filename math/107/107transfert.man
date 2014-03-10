@@ -1,0 +1,52 @@
+.\" Manpage for ruby_sources.
+.\" Contact bauwen_j@epitech.eu and berne_b@epitech.eu .in to correct errors or typos.
+.TH man 1 " 2013" "1.0" "107transfert man page"
+
+.SH NAME
+107transfert
+
+.SH SYNOPSIS
+
+.P
+\fBmode 1 : ./107transfert\fR <\fIfct_coef\fR>
+.P
+.P
+\fBmode  2 : ./107transfert\fR <\fIfct_coef_1\fR> <\fIfct_coef_2\fR> ... <\fIfct_coef_n\fR> <\fIfct_coef_n + 1\fR>
+.P
+.SH DESCRIPTION
+
+List of the mods :
+.br
+	enter the coefficient of a fonction like : "1|2|3|4|5"
+.br
+
+-one argument :
+.br
+	coefficients are in the order of reading
+.br
+	eval the equation with two method
+.br
+
+-pair arguments :
+.br
+	coefficient ar in the reverse order of reading
+.br
+	calcul, record and trace the transfert equation
+.br
+
+- --compare :
+	it's the same a one argument for all the returned coefficient
+.br
+
+.SH SEE ALSO
+No related manpage.
+
+.SH REPORTING BUGS
+No known bugs.
+
+.br
+Report ./107transfert bugs to alexis.berne@epitech.eu or to jordan.bauwens@epitech.eu
+.SH AUTHOR
+berne_b, bauwen_j
+
+
